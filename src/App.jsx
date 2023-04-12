@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import Home from "./Components/Home";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const [log, setLog] = useState(false);
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (name !== "usuario1" && password !== "passwordSegura") {
+      console.log("hay algo mal");
+    } else {
+      setLog(true);
+    }
+  };
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <>
+      {!log ? (
+        <>
+          {!name ? (
+            <h2>¡Welcome to my portfolio!</h2>
+          ) : (
+            <h2>¡Welcome {name}!</h2>
+          )}
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="name">
+              Write your name
+              <input
+                type="text"
+                id="name"
+                placeholder="Write your name"
+                onChange={(e) => setName(e.target.value)}
+              />
+            </label>
+            <label htmlFor="pasW">
+              Write the right password
+              <input
+                id="pasW"
+                type="password"
+                placeholder="Write the right password"
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </label>
+            <button type="submit">Entrar</button>
+          </form>
+        </>
+      ) : (
+        <Home />
+      )}
+    </>
+  );
 }
 
-export default App
+export default App;
