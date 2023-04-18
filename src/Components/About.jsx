@@ -8,11 +8,11 @@ function About() {
   return (
     <section id="about">
       <h2>
-        En este portafolio podran encontrar una muestra de mi trabajo como
-        desarrollador Front End
+        On this portfolio you will find some of the projects that I have done as
+        a FrontEnd Developer
       </h2>
       <article>
-        <p>Esta pagina ha sido desarrollada gracias a tecnologias como</p>
+        <p>This webside has been developed thanks to technologies as</p>
         <figure>
           <img src={vite} alt="imagen de vite" />
           <figcaption>Vite</figcaption>

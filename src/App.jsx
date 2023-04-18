@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Home from "./Components/Home";
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (name !== "usuario1" && password !== "passwordSegura") {
-      console.log("hay algo mal");
+      console.log("something went wrong");
     } else {
       setLog(true);
     }
