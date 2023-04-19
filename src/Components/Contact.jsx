@@ -2,6 +2,7 @@ import React from "react";
 import whatsapp from "../assets/SVGimg/wha.svg";
 import linkedinLogo from "../assets/SVGimg/linkedin.svg";
 import email from "../assets/SVGimg/email.svg";
+import github from "../assets/SVGimg/github.svg";
 
 function Contact() {
   return (
@@ -18,7 +19,7 @@ function Contact() {
           <img src={linkedinLogo} alt="hola" />
         </a>{" "}
         <a href="https://github.com/nicolasnos/" target="_blank">
-          github
+          <img src={github} alt="github logo" />
         </a>
         <a href="mailto: nicolas.nos27@gmail.com">
           <img src={email} alt="email logo" />

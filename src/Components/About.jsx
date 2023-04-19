@@ -1,4 +1,5 @@
 import React from "react";
+import yo from "../assets/SVGimg/yo.jpeg";
 import vite from "../assets/vite.svg";
 import sas from "../assets/sass.svg";
 import react from "../assets/React.svg";
@@ -10,6 +11,7 @@ function About() {
       <h2>
         On this portfolio you will find some of the projects that I have done as
         a FrontEnd Developer
+        <img src={yo} alt="imagen de nicolas" />
       </h2>
       <article>
         <p>This webside has been developed thanks to technologies as</p>
@@ -29,6 +31,10 @@ function About() {
           <img src={js} alt="imagen de Javascript" />
           <figcaption>Javascript</figcaption>
         </figure>
+      </article>
+      <article id="skills">
+        <h3>Here're some of my skills as FrontEnd Developer</h3>
+        <div></div>
       </article>
     </section>
   );
