@@ -13,7 +13,7 @@ function About() {
         a FrontEnd Developer
         <img src={yo} alt="imagen de nicolas" />
       </h2>
-      <article>
+      <article className="powered">
         <p>This webside has been developed thanks to technologies as</p>
         <figure>
           <img src={vite} alt="imagen de vite" />
@@ -32,9 +32,71 @@ function About() {
           <figcaption>Javascript</figcaption>
         </figure>
       </article>
-      <article id="skills">
-        <h3>Here're some of my skills as FrontEnd Developer</h3>
-        <div></div>
+      <article className="skills">
+        <h2>
+          About my skills, I would like to say that I am constantly improving
+          myself, to become a better person and developer through challenges.
+        </h2>
+        <article id="frontSkills">
+          <h3>Here're some of my skills as FrontEnd Developer</h3>
+          <div>
+            <h4>Responsive Design 85%</h4>
+            <progress max="100" value="85">
+              85%
+            </progress>
+          </div>
+          <div>
+            <h4>Calling APIs Rest 70%</h4>
+            <progress max="100" value="70">
+              70%
+            </progress>
+          </div>
+          <div>
+            <h4>Git and Github 70%</h4>
+            <progress max="100" value="70">
+              70%
+            </progress>
+          </div>
+          <div>
+            <h4>HTML and CSS 80%</h4>
+            <progress max="100" value="80">
+              80%
+            </progress>
+          </div>
+          <div>
+            <h4>React Js 75%</h4>
+            <progress max="100" value="75">
+              75%
+            </progress>
+          </div>
+        </article>
+        <article className="softSkills">
+          <h3>These are my skills as a person</h3>
+          <div>
+            <h4>TeamWork 85%</h4>
+            <progress max="100" value="85">
+              85%
+            </progress>
+          </div>
+          <div>
+            <h4>Communication 80%</h4>
+            <progress max="100" value="80">
+              80%
+            </progress>
+          </div>
+          <div>
+            <h4>Problem Solving 75%</h4>
+            <progress max="100" value="75">
+              75%
+            </progress>
+          </div>
+          <div>
+            <h4>Learning Actitude 80%</h4>
+            <progress max="100" value="80">
+              80%
+            </progress>
+          </div>
+        </article>
       </article>
     </section>
   );
