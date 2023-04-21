@@ -1,0 +1,26 @@
+#home {
+  background-color: #114a64;
+  display: flex;
+  justify-content: center;
+  font-size: larger;
+  position: fixed;
+  width: 100%;
+  height: 10%;
+  & ul {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 30px;
+  }
+  & a {
+    padding: 10px;
+    text-decoration: none;
+    color: wheat;
+    &:hover {
+      transition: 500ms;
+      background-color: #d4a855;
+      border-radius: 20px;
+    }
+  }
+}

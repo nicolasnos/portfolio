@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Home from "./Components/Home";
+import "./App.scss";
 
 function App() {
   const [name, setName] = useState("");
@@ -42,7 +43,7 @@ function App() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </label>
-            <button type="submit">Entrar</button>
+            <button type="submit">LogIn</button>
           </form>
         </>
       ) : (
