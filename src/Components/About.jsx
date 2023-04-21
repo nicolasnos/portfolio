@@ -8,35 +8,35 @@ import js from "../assets/js.svg";
 function About() {
   return (
     <section id="about">
-      <h2>
-        On this portfolio you will find some of the projects that I have done as
-        a FrontEnd Developer
+      <article className="intro">
+        <h2>
+          On this portfolio you will find some of the projects that I have done
+          as a FrontEnd Developer
+        </h2>
         <img src={yo} alt="imagen de nicolas" />
-      </h2>
+      </article>
       <article className="powered">
-        <p>This webside has been developed thanks to technologies as</p>
-        <figure>
-          <img src={vite} alt="imagen de vite" />
-          <figcaption>Vite</figcaption>
-        </figure>
-        <figure>
-          <img src={sas} alt="imagen de SCSS" />
-          <figcaption>SCSS</figcaption>
-        </figure>
-        <figure>
-          <img src={react} alt="imagen de React" />
-          <figcaption>React</figcaption>
-        </figure>
-        <figure>
-          <img src={js} alt="imagen de Javascript" />
-          <figcaption>Javascript</figcaption>
-        </figure>
+        <p>This webside has been developed thanks to technologies such as</p>
+        <div>
+          <figure>
+            <img src={vite} alt="imagen de vite" />
+            <figcaption>Vite</figcaption>
+          </figure>
+          <figure>
+            <img src={sas} alt="imagen de SCSS" />
+            <figcaption>SCSS</figcaption>
+          </figure>
+          <figure>
+            <img src={react} alt="imagen de React" />
+            <figcaption>React</figcaption>
+          </figure>
+          <figure>
+            <img src={js} alt="imagen de Javascript" />
+            <figcaption>Javascript</figcaption>
+          </figure>
+        </div>
       </article>
       <article className="skills">
-        <h2>
-          About my skills, I would like to say that I am constantly improving
-          myself, to become a better person and developer through challenges.
-        </h2>
         <article id="frontSkills">
           <h3>Here're some of my skills as FrontEnd Developer</h3>
           <div>
