@@ -34,7 +34,7 @@ const Projects = () => {
             <img src={portal} alt="js exercises image" />
             <figcaption>
               This is the login portal of a project where I did some exercises
-              with JavaScript Vanilla
+              with Vanilla JavaScript
             </figcaption>
           </a>
         </figure>
