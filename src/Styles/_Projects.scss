@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 30px;
 
   & h2 {
     color: #000;
@@ -12,12 +13,28 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-
+    justify-content: space-around;
     & figure {
-      width: 40%;
+      width: 40vw;
+      text-align: center;
+      &:hover {
+        transition: 500ms;
+        margin-top: -5px;
+        background-color: #114a64;
+        border-radius: 20px;
+      }
     }
+
     & img {
-      width: min-content;
+      width: 40vw;
+    }
+
+    & a {
+      text-decoration: none;
+      color: #000;
+      & :hover {
+        color: #d4a855;
+      }
     }
   }
 }

@@ -10,8 +10,8 @@ function Home() {
     <div className="Landing">
       <Header />
       <About />
-      <Projects />
       <Contact />
+      <Projects />
       <Footer />
     </div>
   );
