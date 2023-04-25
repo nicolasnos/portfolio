@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Home from "./Components/Home";
 import "./App.scss";
 
 function App() {
+  //variables que verifican usuario, contraseña y renderizacion a Home
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [log, setLog] = useState(false);
 
   const handleSubmit = (e) => {
+    //funcion verificadora
     e.preventDefault();
-    if (name !== "usuario1" && password !== "passwordSegura") {
+    if (name !== "userName1" && password !== "safePassword") {
       console.log("something went wrong");
     } else {
       setLog(true);
@@ -17,6 +19,7 @@ function App() {
   };
   return (
     <>
+      {/* saludo por defecto y saludo personalizado al usuario*/}
       {!log ? (
         <>
           <main>
@@ -51,9 +54,15 @@ function App() {
               </label>
               <button type="submit">LogIn</button>
             </form>
+            {/* credenciales necesarias para que se pueda ingresar*/}
+            <div className="credentials">
+              <h2>username: userName1</h2>
+              <h3>password: safePassword</h3>
+            </div>
           </main>
         </>
       ) : (
+        /*Caso positivo en el que las credenciales sean correctas, va a Home */
         <Home />
       )}
     </>

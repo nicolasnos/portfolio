@@ -4,7 +4,7 @@
   align-items: center;
   font-size: larger;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   height: 10%;
   top: 0;
   padding-top: 15px;
@@ -13,19 +13,21 @@
   & ul {
     margin: 0;
     display: flex;
-    width: 100%;
     justify-content: space-evenly;
     flex-direction: row;
     list-style: none;
+    /*media query de computador*/
     @include computer {
       justify-content: center;
       gap: 100px;
     }
   }
+
   & a {
     padding: 10px;
     text-decoration: none;
-    color: wheat;
+    color: #f5deb3;
+
     &:hover {
       transition: 500ms;
       background-color: #d4a855;

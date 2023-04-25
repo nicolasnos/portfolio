@@ -4,6 +4,7 @@ function Header() {
   return (
     <nav id="home">
       <ul>
+        {/*al hacer click sobre cada uno de los elementos de la lista, va a redirigir a la parte indicada de la pagina */}
         <li>
           <a href="#about">About</a>
         </li>

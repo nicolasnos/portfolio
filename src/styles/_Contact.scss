@@ -7,9 +7,12 @@
   padding-top: 10px;
   background-color: #d4a855;
   margin-top: 40px;
+
+  /*media query de tablet*/
   @include tablet {
     justify-content: space-evenly;
   }
+  /*media query de computador*/
   @include computer {
     justify-content: space-evenly;
   }

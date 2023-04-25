@@ -1,12 +1,18 @@
 #about {
-  margin-top: 80px;
+  margin-top: 40px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  /*media query de tablet*/
   @include tablet {
     margin-top: 37px;
   }
+  /*media query de computador*/
+  @include computer {
+    margin-top: 80px;
+  }
+
   & h2 {
     color: #000;
     width: 40%;
@@ -31,12 +37,14 @@
   }
   .powered {
     text-align: center;
+    width: 90%;
+
     & p {
       font-weight: 600;
     }
 
     & .imagenes {
-      width: 100vw;
+      width: 90%;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -59,8 +67,19 @@
   }
 
   .skills {
-    width: 90%;
+    width: 100%;
+    flex-wrap: wrap;
     display: flex;
-    justify-content: space-around;
+    text-align: left;
+
+    /*media query de tablet*/
+    @include tablet {
+      justify-content: space-around;
+    }
+
+    /*media query de computador*/
+    @include computer {
+      justify-content: space-around;
+    }
   }
 }

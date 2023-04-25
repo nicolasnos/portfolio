@@ -15,6 +15,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
+    width: 100%;
 
     & figure {
       width: 80vw;
@@ -36,9 +37,11 @@
 
     & img {
       width: 80vw;
+      /*media query de tablet*/
       @include tablet {
         width: 50vw;
       }
+      /*media query de computador*/
       @include computer {
         width: 40vw;
       }
