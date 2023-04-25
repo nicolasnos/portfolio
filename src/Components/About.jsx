@@ -17,7 +17,7 @@ function About() {
       </article>
       <article className="powered">
         <p>This webside has been developed thanks to technologies such as</p>
-        <div>
+        <div className="imagenes">
           <figure>
             <img src={vite} alt="imagen de vite" />
             <figcaption>Vite</figcaption>

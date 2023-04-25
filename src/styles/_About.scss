@@ -3,14 +3,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  width: 100vw;
+  @include tablet {
+    margin-top: 37px;
+  }
   & h2 {
     color: #000;
+    width: 40%;
   }
 
   .intro {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 80%;
 
     & img {
@@ -25,13 +30,17 @@
     }
   }
   .powered {
+    text-align: center;
     & p {
       font-weight: 600;
     }
 
-    & div {
+    & .imagenes {
+      width: 100vw;
       display: flex;
       flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
       text-align: center;
 
       & figure img {
@@ -53,12 +62,5 @@
     width: 90%;
     display: flex;
     justify-content: space-around;
-
-    /*     .frontSkills div progress {
-      color: #114a64;
-      &:hover {
-        color: #d4a855;
-      }
-    } */
   }
 }

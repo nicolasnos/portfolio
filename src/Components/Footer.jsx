@@ -6,7 +6,7 @@ import github from "../assets/SVGimg/github.svg";
 
 function Footer() {
   return (
-    <section className="footer">
+    <footer className="footer">
       <a href="http://wa.link/mj3ahm" target="_blank">
         <img src={whatsapp} alt="whatsapp logo" />
       </a>
@@ -22,7 +22,7 @@ function Footer() {
       <a href="mailto: nicolas.nos27@gmail.com">
         <img src={email} alt="email logo" />
       </a>
-    </section>
+    </footer>
   );
 }
 
