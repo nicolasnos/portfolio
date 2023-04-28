@@ -1,4 +1,5 @@
 import React from "react";
+import CV from "../assets/CV.pdf";
 
 function Header() {
   return (
@@ -13,6 +14,11 @@ function Header() {
         </li>
         <li>
           <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href={CV} download="CV Nicolas Olmos">
+            My CV
+          </a>
         </li>
       </ul>
     </nav>

@@ -40,31 +40,31 @@ function About() {
         <article id="frontSkills">
           <h3>Here're some of my skills as FrontEnd Developer</h3>
           <div>
-            <h4>Responsive Design 85%</h4>
+            <p>Responsive Design 85%</p>
             <progress max="100" value="85">
               85%
             </progress>
           </div>
           <div>
-            <h4>Calling APIs Rest 70%</h4>
+            <p>Calling APIs Rest 70%</p>
             <progress max="100" value="70">
               70%
             </progress>
           </div>
           <div>
-            <h4>Git and Github 70%</h4>
+            <p>Git and Github 70%</p>
             <progress max="100" value="70">
               70%
             </progress>
           </div>
           <div>
-            <h4>HTML and CSS 80%</h4>
+            <p>HTML and CSS 80%</p>
             <progress max="100" value="80">
               80%
             </progress>
           </div>
           <div>
-            <h4>React Js 75%</h4>
+            <p>React Js 75%</p>
             <progress max="100" value="75">
               75%
             </progress>
@@ -73,25 +73,25 @@ function About() {
         <article className="softSkills">
           <h3>These are my skills as a person</h3>
           <div>
-            <h4>TeamWork 85%</h4>
+            <p>TeamWork 85%</p>
             <progress max="100" value="85">
               85%
             </progress>
           </div>
           <div>
-            <h4>Communication 80%</h4>
+            <p>Communication 80%</p>
             <progress max="100" value="80">
               80%
             </progress>
           </div>
           <div>
-            <h4>Problem Solving 75%</h4>
+            <p>Problem Solving 75%</p>
             <progress max="100" value="75">
               75%
             </progress>
           </div>
           <div>
-            <h4>Learning Actitude 80%</h4>
+            <p>Learning Actitude 80%</p>
             <progress max="100" value="80">
               80%
             </progress>

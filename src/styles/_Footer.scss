@@ -7,6 +7,13 @@
   width: 100%;
   gap: 10px;
   background-color: #114a64;
+  color: #d4a855;
+  font-size: large;
+
+  & a {
+    text-decoration: none;
+    color: #d4a855;
+  }
 
   /*media query de tablet*/
   @include tablet {
