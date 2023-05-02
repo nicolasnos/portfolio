@@ -91,7 +91,7 @@ function About() {
             </div>
           </div>
           <div className="learning">
-            Learning Actitude
+            Learning Attitude
             <div className="contenedor">
               <div className="valor"></div>
             </div>
