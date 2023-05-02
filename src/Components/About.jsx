@@ -39,62 +39,62 @@ function About() {
       <article className="skills">
         <article id="frontSkills">
           <h3>Here're some of my skills as FrontEnd Developer</h3>
-          <div>
-            <p>Responsive Design 85%</p>
-            <progress max="100" value="85">
-              85%
-            </progress>
+          <div className="responsive">
+            Responsive Design
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
-          <div>
-            <p>Calling APIs Rest 70%</p>
-            <progress max="100" value="70">
-              70%
-            </progress>
+          <div className="api">
+            Calling APIs Rest
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
-          <div>
-            <p>Git and Github 70%</p>
-            <progress max="100" value="70">
-              70%
-            </progress>
+          <div className="git">
+            Git and Github
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
-          <div>
-            <p>HTML and CSS 80%</p>
-            <progress max="100" value="80">
-              80%
-            </progress>
+          <div className="css">
+            HTML and CSS
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
-          <div>
-            <p>React Js 75%</p>
-            <progress max="100" value="75">
-              75%
-            </progress>
+          <div className="react">
+            React JS
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
         </article>
         <article className="softSkills">
           <h3>These are my skills as a person</h3>
-          <div>
-            <p>TeamWork 85%</p>
-            <progress max="100" value="85">
-              85%
-            </progress>
+          <div className="teamwork">
+            TeamWork
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
-          <div>
-            <p>Communication 80%</p>
-            <progress max="100" value="80">
-              80%
-            </progress>
+          <div className="communication">
+            Communication
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
-          <div>
-            <p>Problem Solving 75%</p>
-            <progress max="100" value="75">
-              75%
-            </progress>
+          <div className="problem">
+            Problem Solving
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
-          <div>
-            <p>Learning Actitude 80%</p>
-            <progress max="100" value="80">
-              80%
-            </progress>
+          <div className="learning">
+            Learning Actitude
+            <div className="contenedor">
+              <div className="valor"></div>
+            </div>
           </div>
         </article>
       </article>
