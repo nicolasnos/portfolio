@@ -30,8 +30,18 @@
   flex-wrap: wrap;
 
   & img {
-    height: 80px;
-    padding: 2px;
+    height: 70px;
+    padding: 25px;
+
+    @include tablet {
+      height: 80px;
+      padding: 2px;
+    }
+
+    @include computer {
+      height: 80px;
+      padding: 2px;
+    }
     &:hover {
       transition: 500ms;
       border-radius: 50%;

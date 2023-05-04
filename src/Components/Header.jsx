@@ -1,9 +1,13 @@
 import React from "react";
 import CV from "../assets/CV.pdf";
+import logo from "../assets/Nlogo.png";
 
 function Header() {
   return (
     <nav id="home">
+      <div className="logoBox">
+        <img src={logo} alt="logo de nicolas" />
+      </div>
       <ul>
         {/*al hacer click sobre cada uno de los elementos de la lista, va a redirigir a la parte indicada de la pagina */}
         <li>

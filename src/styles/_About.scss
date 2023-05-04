@@ -14,24 +14,29 @@
   }
 
   & h2 {
+    text-align: center;
     color: #000;
-    width: 40%;
+    width: 80%;
   }
 
   .intro {
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    width: 80%;
-    padding-top: 50px;
+    width: 100%;
+    padding-top: 70px;
     & img {
-      height: 300px;
-      border-radius: 50px;
+      object-fit: cover;
+      height: 280px;
+      width: 240px;
+      border-radius: 50% 50% 50% 50% / 49% 47% 53% 51%;
+      border: hidden;
       &:hover {
         transition: 500ms;
-        box-shadow: 0px 0px 5px 6px rgba(156, 148, 148, 0.36);
-        -webkit-box-shadow: 0px 0px 5px 6px rgba(156, 148, 148, 0.36);
-        -moz-box-shadow: 0px 0px 5px 6px rgba(156, 148, 148, 0.36);
+        box-shadow: 0px 0px 5px 6px #114a64;
+        -webkit-box-shadow: 0px 0px 5px 6px #114a64;
+        -moz-box-shadow: 0px 0px 5px 6px #114a64;
       }
     }
   }
