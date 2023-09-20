@@ -3,100 +3,52 @@ body {
 }
 
 main {
-  margin: 0;
   background-color: #114a64;
   height: 100vh;
-  width: 100vw;
+  width: 90vw;
+  padding: 0 5vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: larger;
   font-family: "Rampart One", cursive;
   font-family: "Roboto", sans-serif;
+  color: #f5f5f5;
+  text-align: center;
 
-  & h2 {
-    color: #f5f5f5;
-  }
-
-  .saludo {
+  & .flags {
+    height: 150px;
     display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-wrap: wrap;
-  }
-  /*media quiery de tablet*/
-  @include tablet {
-    justify-content: center;
-  }
-  /*media quiery de tablet*/
-  @include computer {
-    justify-content: center;
-  }
-
-  & .credentials {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    /*forma extraña del div*/
-    border-radius: 30% 70% 100% 0% / 30% 82% 18% 70%;
-    background-color: #f5f5f5;
-    width: 200px;
-    font-size: small;
-
-    &:hover {
-      transition: all 1s;
-      border-radius: 80% 20% 92% 8% / 21% 90% 10% 79%;
-      background-color: #d4a855;
-    }
-
-    h2 {
-      color: black;
+    justify-content: space-around;
+    & button {
+      background-color: white;
+      border-radius: 2rem;
+      border: none;
+      &:hover {
+        transition: ease-in 300ms;
+        background-color: gray;
+      }
+      & img {
+        height: 85px;
+        background-color: transparent;
+      }
     }
   }
 }
 
-form {
+.logger {
+  margin-top: 50px;
+  padding: 10px;
+  color: black;
   background-color: #f5f5f5;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-direction: column;
-  min-height: 250px;
-  max-height: 400px;
-  min-width: 175px;
-  max-width: 275px;
-  border-radius: 40px;
-
-  & label {
-    text-align: center;
-  }
-
-  & input {
-    text-align: center;
-    border-radius: 10px;
-    border-color: transparent;
-    font-size: medium;
-    &:focus {
-      background-color: #114a6469;
-      outline: none;
-      color: #f5f5f5;
-      font-weight: bold;
+  border: 0;
+  border-radius: 20px;
+  cursor: pointer;
+  &:hover {
+    transition: 500ms;
+    background-color: #d4a855;
+    transition: ease-in 250ms;
+    border-radius: 20px;
+    color: black;
     }
   }
-
-  & button {
-    color: #f5f5f5;
-    background-color: #114a64;
-    width: 70%;
-    height: 1.5rem;
-    border-radius: 10px;
-    border-color: transparent;
-    &:hover {
-      transition: 500ms;
-      font-weight: bold;
-      font-size: medium;
-    }
-  }
-}

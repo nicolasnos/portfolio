@@ -9,16 +9,22 @@
   padding-top: 15px;
   background-color: #114a64;
 
-  & .logoBox {
+  & .flagBox {
     display: none;
-    justify-content: center;
-    width: 10%;
     height: 100%;
-    & img {
-      width: 60px;
+    justify-content: space-around;
+    & button {
+      background-color: transparent;
+      cursor: pointer;
       height: 100%;
+      border: none;
+      & img {
+        width: 60px;
+      }
     }
     @include tablet {
+      margin-top: -5px;
+      height: max-content;
       display: flex;
     }
     @include computer {
