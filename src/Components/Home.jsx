@@ -5,14 +5,14 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
-function Home({ language, setLanguage }) {
+function Home({language, setLanguage}) {
   return (
     <div className="Landing">
       <Header language={language} setLanguage={setLanguage} />
-      <About language={language} />
-      <Contact language={language} />
-      <Projects language={language} />
-      <Footer language={language} />
+      <About language={language}/>
+      <Projects language={language}/>
+      <Footer language={language}/>
+      <Contact language={language}/>
     </div>
   );
 }
