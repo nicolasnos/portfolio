@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { idioma } from "./LanguageContext";
+import { IdiomaProvider, useIdioma } from "./LanguageContext";
 import Home from "./Components/Home";
 import { flags } from "./assets/flags";
 import "./App.scss";
@@ -7,9 +7,9 @@ import "./App.scss";
 function App() {
   const [language, setLanguage] = useState("eng");
   const [entrace, setEntrace] = useState(false);
-
+  
   return (
-    <idioma.Provider value={language}>
+    <IdiomaProvider>
       {entrace ? (
         <Home language={language} setLanguage={setLanguage} />
       ) : (
@@ -38,7 +38,7 @@ function App() {
                 : "Ir al portafolio"}</button>
         </main>
       )}
-    </idioma.Provider>
+    </IdiomaProvider>
   );
 }
 

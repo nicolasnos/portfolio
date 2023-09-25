@@ -1,10 +1,10 @@
 import React from "react";
 
-function Footer() {
+function Footer({language}) {
   return (
     <footer className="footer">
       <p>
-        Powered by{" "}
+        {(language === "eng") ? "Powered by " : "Desarrollado por "}
         <a
           href="https://www.linkedin.com/in/nicolas-olmos-a7a1ba261/"
           target="_blank"

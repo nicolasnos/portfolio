@@ -1,4 +1,24 @@
-import React, {createContext} from 'react'
+import React, {useState, useContext,createContext} from 'react'
 
-const initalLanguage = "eng"
-export const idioma = createContext(initalLanguage);
+const IdiomaContext = createContext();
+
+export const IdiomaProvider = ({ children }) => {
+  const [userLanguage, setUserLanguage] = useState("esp");
+
+  function handleLanguageChange  (newLanguage) {
+    setUserLanguage(newLanguage);
+  };
+  const contextValue = {
+    idioma: userLanguage,
+    cambiarIdioma: handleLanguageChange,
+  };
+  return (
+    <IdiomaContext.Provider value={contextValue.idioma}>
+      {children}
+    </IdiomaContext.Provider>
+  );
+};
+
+export const useIdioma = () => {
+  return useContext(IdiomaContext);
+};

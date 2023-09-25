@@ -3,41 +3,43 @@ import bookL from "../assets/SVGimg/book.png";
 import boneL from "../assets/SVGimg/bone-list.png";
 import portal from "../assets/SVGimg/jsExercises.png";
 
-const Projects = () => {
+const Projects = ({language}) => {
+  const projects = [
+    {
+      id: 0,
+      href: "https://book-colection.netlify.app/",
+      src: bookL,
+      alt: "book colection image",
+      caption: (language === "eng") ? "This project use an API that I call to get the data of many books that you can read online" : "Este proyecto usa una API que trae la informacion de distintos libros para leer gratis"
+    },
+    {
+      id: 1,
+      href: "https://book-colection.netlify.app/",
+      alt: "book colection image",
+      src: boneL,
+      caption: (language === "eng" ? "You can save some bones on this app, the main idea of this project is to show CURD operations" : "Es una app en donde puedes guardar huesos, la idea central de este proyecto es mostrar las operaciones CRUD")
+    },
+    {
+      id: 2,
+      href: "https://book-colection.netlify.app/",
+      alt: "book colection image",
+      src: portal,
+      caption: (language === "eng") ? "This is the login portal of a project where I did some exercises with Vanilla JavaScript" : "Este es el portal de loggeo de un proyecto en donde hice una serie de ejercicios con Javascript"
+    },
+  ]
+  
   return (
     <section id="projects">
-      <h2>Here are some of the projects that I've done</h2>
+      <h2>{(language === "eng") ? "Here are some of the projects that I've done and been part of": "Algunos proyectos que he hecho y de los que he sido parte"}</h2>
       <article className="images">
-        <figure>
-          <a href="https://book-colection.netlify.app/" target="_blank">
-            <img src={bookL} alt="book colection image" />
-            <figcaption>
-              This project use an API that I call to get the data of many books
-              that you can read online
-            </figcaption>
+        {projects.map((project)=>
+        <figure key={project.id}>
+          <a href={project.href} target="_blank">
+            <img src={project.src} alt={project.alt} />
+            <figcaption>{project.caption}</figcaption>
           </a>
         </figure>
-        <figure>
-          <a href="https://nicolasnos.github.io/bit08-react/" target="_blank">
-            <img src={boneL} alt="bone list image" />
-            <figcaption>
-              You can save some bones on this app, the main idea of this project
-              is do CURD operations
-            </figcaption>
-          </a>
-        </figure>
-        <figure>
-          <a
-            href="https://nicolasnos.github.io/ejercicios-vacaciones-BIT/"
-            target="_blank"
-          >
-            <img src={portal} alt="js exercises image" />
-            <figcaption>
-              This is the login portal of a project where I did some exercises
-              with Vanilla JavaScript
-            </figcaption>
-          </a>
-        </figure>
+        )}
       </article>
     </section>
   );
