@@ -50,6 +50,8 @@ function About({language}) {
       place: "Metanoiia",
       duration: 3,
       duties: (language === "eng") ? ["Maintenance of applications", "Development of new applications", "Search for solutions to meet client needs in terms of application usage and capacity"] : ["Mantenimiento de aplicaciones", "Desarrollo de nuevas aplicaciones y mock ups", "Buscar soluciones para las necesidades de cliente en cuanto al uso y capacidad de aplicaciones"],
+      from: "08/2022",
+      to: "11/2022"
     },
     {
       id: 1,
@@ -57,13 +59,17 @@ function About({language}) {
       place: "Id for Ideas",
       duration: 3,
       duties: (language === "eng") ? ["Verify changes in projects developed through Github", "Develop web applications using HTML, CSS and Javascript with the React framework", "Find technical solutions to ensure that the application meets the needs and expectations of the client"] : ["Verificar los cambios en los proyectos desarrollados a traves de Github", "Desarrollo de aplicaciones web utilizando HTML, CSS y Javascript con el framework de React.", "Buscar soluciones a problemas tecnicos para que la aplicacion cumpla con las necesidades y expectativas del cliente"],
+      from: "03/2023",
+      to: "05/2023"
     },
     {
       id: 2,
       title:  (language === "eng") ? "Web Developer" : "Desarrollador Web",
       place: "Soundlutions",
-      duration: 5,
+      duration: 6,
       duties: (language === "eng") ? ["Coding reviews to resolve bugs.", "Develop web applications using TypeScript, React and Tailwind frameworks", "Help to develop the user experience for the projects developed making a responsive design all the projects where worked"] : ["Revisiones de codigo para resolver bugs", "Desarrollar aplicaciones web ussando los frameworks de TypeScript", "Ayudar a desarrolar teniendo en cuenta la experiencia del usuario para los proyectos, haciendo un desarrollo responsivo en los proyectos que participó"],
+      from: "05/2023",
+      to: (language === "eng") ? "current" : "actual"
     }
   ]
 
@@ -147,7 +153,7 @@ function About({language}) {
           </div>
         </article>
       </article>
-      <article>
+      <article className="experience">
         {experience.map((job)=>
         <ul key={job.id}>
           <h3>{job.title}</h3>

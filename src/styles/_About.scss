@@ -305,4 +305,17 @@
       justify-content: space-around;
     }
   }
+
+  .experience{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+    & button {
+      border-radius: 2rem;
+      border: transparent;
+      cursor: pointer;
+    }
+  }
 }
