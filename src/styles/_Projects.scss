@@ -27,6 +27,10 @@
         border-radius: 20px;
       }
 
+      &:hover a{
+        color: #d4a855;
+      }
+
       @include tablet {
         width: 50vw;
       }
@@ -50,9 +54,6 @@
     & a {
       text-decoration: none;
       color: #000;
-      & :hover {
-        color: #d4a855;
-      }
     }
   }
 }

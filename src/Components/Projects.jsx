@@ -1,7 +1,7 @@
 import React from "react";
 import bookL from "../assets/SVGimg/book.png";
 import boneL from "../assets/SVGimg/bone-list.png";
-import portal from "../assets/SVGimg/jsExercises.png";
+import portal from "../assets/SVGimg/vanilla.png";
 
 const Projects = ({language}) => {
   const projects = [
@@ -14,15 +14,15 @@ const Projects = ({language}) => {
     },
     {
       id: 1,
-      href: "https://book-colection.netlify.app/",
-      alt: "book colection image",
+      href: "https://nicolasnos.github.io/bit08-react/",
+      alt: "bone list",
       src: boneL,
       caption: (language === "eng" ? "You can save some bones on this app, the main idea of this project is to show CURD operations" : "Es una app en donde puedes guardar huesos, la idea central de este proyecto es mostrar las operaciones CRUD")
     },
     {
       id: 2,
-      href: "https://book-colection.netlify.app/",
-      alt: "book colection image",
+      href: "https://nicolasnos.github.io/ejercicios-vacaciones-BIT/",
+      alt: "Link to vanilla javascript excercises",
       src: portal,
       caption: (language === "eng") ? "This is the login portal of a project where I did some exercises with Vanilla JavaScript" : "Este es el portal de loggeo de un proyecto en donde hice una serie de ejercicios con Javascript"
     },
