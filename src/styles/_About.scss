@@ -65,247 +65,6 @@
     }
   }
 
-  .skills {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-
-    & #frontSkills {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-
-      //Barra de responsive
-      & .responsive {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 85%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      //Barra de apis
-      & .api {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 70%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      //Barra de git
-      & .git {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 75%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      //Barra de css
-      & .css {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 80%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      //Barra de react
-      & .react {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 75%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      /*media query de tablet*/
-      @include tablet {
-        width: 50%;
-      }
-
-      /*media query de computador*/
-      @include computer {
-        width: 50%;
-      }
-    }
-
-    & .softSkills {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-
-      /*Estilos de barra CSS*/
-      & .teamwork {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 85%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      // Estilos de barra communication
-      & .communication {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 80%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      // Estilos de barra problem
-      & .problem {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 75%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      /*Estilos de barra learning*/
-      & .learning {
-        padding-bottom: 2rem;
-        .contenedor {
-          width: 280px;
-          height: 15px;
-          background-color: #d6cdcd;
-          border-radius: 10px;
-          & .valor {
-            width: 85%;
-            height: 100%;
-            border-radius: 10px;
-            background-color: #114a64;
-            &:hover {
-              transition: 500ms;
-              background-color: #d4a855;
-            }
-          }
-        }
-      }
-
-      /*media query de tablet*/
-      @include tablet {
-        width: 50%;
-      }
-
-      /*media query de computador*/
-      @include computer {
-        width: 50%;
-      }
-    }
-    /*media query de tablet*/
-    @include tablet {
-      justify-content: space-around;
-    }
-
-    /*media query de computador*/
-    @include computer {
-      justify-content: space-around;
-    }
-  }
-
   .experience{
     display: flex;
     width: 100%;
@@ -316,6 +75,21 @@
       border-radius: 2rem;
       border: transparent;
       cursor: pointer;
+    }
+  }
+  h3{
+    margin-top: 40px;
+  }
+  .skills {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 40px;
+    justify-content: space-evenly;
+    margin: 30px 15px;
+    & img {
+      height: 80px;
     }
   }
 }
