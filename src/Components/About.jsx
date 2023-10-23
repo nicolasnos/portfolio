@@ -5,6 +5,11 @@ import vite from "../assets/vite.svg";
 import sas from "../assets/sass.svg";
 import react from "../assets/React.svg";
 import js from "../assets/js.svg";
+import html from "../assets/html.svg"
+import css from "../assets/css.svg";
+import ts from "../assets/ts.svg"
+import github from "../assets/github.svg";
+import bootstrap from "../assets/bootstrap.svg"
 
 function About({language}) {
   const [viewJob, setViewJob] = useState(false);
@@ -73,6 +78,49 @@ function About({language}) {
     }
   ]
 
+  const hardSkills = [
+    {
+      id: 4,
+      image: html,
+      alt: "HTML"
+    },
+    {
+      id: 5,
+      image: css,
+      alt: "CSS"
+    },
+    {
+      id: 1,
+      image: js,
+      alt: "Javascript"
+    },
+    {
+      id: 2,
+      image: react,
+      alt: "React"
+    },
+    {
+      id: 3,
+      image: sas,
+      alt: "SCSS"
+    },
+    {
+      id: 6,
+      image: ts,
+      alt: "Typescript"
+    },    
+    {
+      id: 7,
+      image: github,
+      alt: "github"
+    },
+    {
+      id: 8,
+      image: bootstrap,
+      alt: "bootstrap"
+    },
+  ]
+
   return (
     <section id="about">
       <article className="intro">
@@ -91,68 +139,6 @@ function About({language}) {
           </figure>)}
         </div>
       </article>
-      <article className="skills">
-        <article id="frontSkills">
-          <h3>{(language === "eng") ? "Here're some of my skills as FrontEnd Developer" : "Acá algunas de mis habilidades"}</h3>
-          <div className="responsive">
-            {(language === "eng") ? "Responsive Design": "Diseño Responsivo"}
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-          <div className="api">
-            {(language === "eng") ? "Calling APIs Rest" : "Llamados a APIs"}
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-          <div className="git">
-            Git & Github
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-          <div className="css">
-            HTML & CSS
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-          <div className="react">
-            React JS
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-        </article>
-        <article className="softSkills">
-          <h3>{(language === "eng") ? "These are my skills as a person" : "Mis valores como persona"}</h3>
-          <div className="teamwork">
-            {(language === "eng") ? "TeamWork" : "trabajo en equipo"}
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-          <div className="communication">
-            {(language === "eng") ? "Assertive Communication": "Comunicación Asertiva"}
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-          <div className="problem">
-            {(language === "eng") ? "Problem Solving": "Resolución de problemas"}
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-          <div className="learning">
-            {(language === "eng") ? "Learning Attitude" : "Actitud de aprender"}
-            <div className="contenedor">
-              <div className="valor"></div>
-            </div>
-          </div>
-        </article>
-      </article>
       <article className="experience">
         {experience.map((job)=>
         <ul key={job.id}>
@@ -164,6 +150,12 @@ function About({language}) {
           </button>
         </ul>
         )}
+      </article>
+        <h3>{(language === "eng") ? "Some skills I have" : "Algunas de las habilidades que manejo"}</h3>
+      <article className="skills">
+          {hardSkills.map((skill) =>
+            <img src={skill.image} key={skill.id} alt={skill.alt} />
+          )}
       </article>
       {viewJob ? <ExperienceModal selectJob={selectJob} setViewJob={setViewJob}/> : false}
     </section>
