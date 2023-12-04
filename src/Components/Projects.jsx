@@ -1,7 +1,7 @@
 import React from "react";
 import bookL from "../assets/SVGimg/book.png";
 import boneL from "../assets/SVGimg/bone-list.png";
-import portal from "../assets/SVGimg/vanilla.png";
+import commerce from "../assets/SVGimg/e-commerce.png";
 
 const Projects = ({language}) => {
   const projects = [
@@ -21,10 +21,10 @@ const Projects = ({language}) => {
     },
     {
       id: 2,
-      href: "https://nicolasnos.github.io/ejercicios-vacaciones-BIT/",
-      alt: "Link to vanilla javascript excercises",
-      src: portal,
-      caption: (language === "eng") ? "This is the login portal of a project where I did some exercises with Vanilla JavaScript" : "Este es el portal de loggeo de un proyecto en donde hice una serie de ejercicios con Javascript"
+      href: "https://e-commerce-kappa-eosin.vercel.app/",
+      alt: "Link e-comerce",
+      src: commerce,
+      caption: (language === "eng") ? "This is an e-commerce portal made with TypeScript and Bootstrap" : "Esta es una pagina de una tienda virtual hecha con TypeScript y Bootstrap"
     },
   ]
   
