@@ -4,7 +4,6 @@ const IdiomaContext = createContext();
 
 export const IdiomaProvider = ({ children }) => {
   const [userLanguage, setUserLanguage] = useState("esp");
-  console.log("ola")
 
   function handleLanguageChange  (newLanguage) {
     setUserLanguage(newLanguage);

@@ -16,7 +16,6 @@ function About({language}) {
   const [selectJob, setSelectJob] = useState();
 
   const handleSelectJob = (job) => {
-    console.log(job)
     setViewJob(true);
     setSelectJob(job);
   }
@@ -71,7 +70,7 @@ function About({language}) {
       id: 2,
       title:  (language === "eng") ? "Web Developer" : "Desarrollador Web",
       place: "Soundlutions",
-      duration: 6,
+      duration: (language === "eng") ? `+12`  : "+12",
       duties: (language === "eng") ? ["Coding reviews to resolve bugs.", "Develop web applications using TypeScript, React and Tailwind frameworks", "Help to develop the user experience for the projects developed making a responsive design all the projects where worked"] : ["Revisiones de codigo para resolver bugs", "Desarrollar aplicaciones web ussando los frameworks de TypeScript", "Ayudar a desarrolar teniendo en cuenta la experiencia del usuario para los proyectos, haciendo un desarrollo responsivo en los proyectos que participó"],
       from: "05/2023",
       to: (language === "eng") ? "current" : "actual"
