@@ -162,3 +162,7 @@ function About({language}) {
 }
 
 export default About;
+
+let utterance = new SpeechSynthesisUtterance("Hello world!");
+speechSynthesis.speak(utterance);
+

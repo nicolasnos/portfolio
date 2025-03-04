@@ -1,15 +1,20 @@
-import React, { useState } from "react";
-import { IdiomaProvider, useIdioma } from "./LanguageContext";
+import React, { useState, useContext } from "react";
+import { IdiomaContext } from "./LanguageContext";
 import Home from "./Components/Home";
 import { flags } from "./assets/flags";
 import "./App.scss";
 
 function App() {
-  const [language, setLanguage] = useState("eng");
+  const { language, setLanguage } = useContext(IdiomaContext);
   const [entrace, setEntrace] = useState(false);
-  
+
+  const handleChangeLanguage = (newLanguage) => {
+    setLanguage(newLanguage);
+    sessionStorage.setItem("language", newLanguage);
+  };
+
   return (
-    <IdiomaProvider>
+    <>
       {entrace ? (
         <Home language={language} setLanguage={setLanguage} />
       ) : (
@@ -27,7 +32,7 @@ function App() {
             </h2>
             <div className="flags">
               {flags.map((flag)=>
-                <button key={flag.id} onClick={()=>setLanguage(flag.select)}>
+                <button key={flag.id} onClick={()=>handleChangeLanguage(flag.select)}>
                   <img src={flag.src} alt={flag.alternate} />
                 </button>
               )}
@@ -38,7 +43,7 @@ function App() {
                 : "Ir al portafolio"}</button>
         </main>
       )}
-    </IdiomaProvider>
+      </>
   );
 }
 
