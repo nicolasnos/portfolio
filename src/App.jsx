@@ -3,6 +3,7 @@ import { IdiomaContext } from "./LanguageContext";
 import Home from "./Components/Home";
 import { flags } from "./assets/flags";
 import "./App.scss";
+import { Link } from "react-router-dom";
 
 function App() {
   const { language, setLanguage } = useContext(IdiomaContext);
@@ -12,12 +13,11 @@ function App() {
     setLanguage(newLanguage);
     sessionStorage.setItem("language", newLanguage);
   };
+  const selectedLanguage = (language === "eng") ? "Welcome to my Portfolio" : "Bienvenidos a mi portafolio";
 
   return (
     <>
-      {entrace ? (
-        <Home language={language} setLanguage={setLanguage} />
-      ) : (
+      
         <main>
           <h1>
             {language === "eng"
@@ -38,11 +38,9 @@ function App() {
               )}
             </div>
           </div>
-          <button className="logger" onClick={() => setEntrace(true)}>{language === "eng"
-                ? "Go To Portfolio"
-                : "Ir al portafolio"}</button>
+          <Link className="logger" to={"/Home"} >{selectedLanguage}</Link>
         </main>
-      )}
+      
       </>
   );
 }
