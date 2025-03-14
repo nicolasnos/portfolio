@@ -1,13 +1,12 @@
-import React, {useState, useContext} from "react";
-import { IdiomaProvider, useIdioma } from "../LanguageContext";
-import CV from "../assets/CV.pdf";
-import HV from '../assets/HV.pdf'
+import React, { useContext} from "react";
+import { IdiomaContext } from "../LanguageContext";
+import {headerEng, headerEsp} from '../assets/text'
 import { flags } from "../assets/flags";
 
-function Header({language, setLanguage}) {
-
+function Header() {
+  const { language, setLanguage } = useContext(IdiomaContext);
+  const selectedLanguage = (language === "eng") ? headerEng : headerEsp;
   return (
-    <IdiomaProvider>
     <nav id="home">
       <div className="flagBox">
       {flags.map((flag)=>
@@ -19,22 +18,21 @@ function Header({language, setLanguage}) {
       <ul>
         {/*al hacer click sobre cada uno de los elementos de la lista, va a redirigir a la parte indicada de la pagina */}
         <li>
-          <a href="#about">{(language === "eng") ? "About" : "Sobre mi"}</a>
+          <a href="#about">{selectedLanguage.About}</a>
         </li>
         <li>
-          <a href="#projects">{(language === "eng") ? "Projects" : "Proyectos"}</a>
+          <a href="#projects">{selectedLanguage.Projects}</a>
         </li>
         <li>
-          <a href="#contact">{(language === "eng") ? "Contact" : "Contacto"}</a>
+          <a href="#contact">{selectedLanguage.Contact}</a>
         </li>
         <li>
-          <a href={(language === "eng") ? CV : HV} download="CV Nicolas Olmos">
-          {(language === "eng") ? "My CV" : "Mi Hoja de vida"}
+          <a href={selectedLanguage.CV } download="CV Nicolas Olmos">
+          {selectedLanguage.CVScript}
           </a>
         </li>
       </ul>
     </nav>
-    </IdiomaProvider>
   );
 }
 

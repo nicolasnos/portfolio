@@ -1,19 +1,19 @@
-import React, {useState, useContext,createContext} from 'react'
+import React, {useState, useContext,createContext, useEffect} from 'react'
 
-const IdiomaContext = createContext();
+export const IdiomaContext = createContext();
 
 export const IdiomaProvider = ({ children }) => {
-  const [userLanguage, setUserLanguage] = useState("esp");
+    const [language, setLanguage] = useState("eng");
 
-  function handleLanguageChange  (newLanguage) {
-    setUserLanguage(newLanguage);
-  };
-  const contextValue = {
-    idioma: userLanguage,
-    cambiarIdioma: handleLanguageChange,
-  };
+    useEffect(() => {
+      sessionStorage.setItem("language", language);
+    }, [language]);
+
   return (
-    <IdiomaContext.Provider value={contextValue.idioma}>
+    <IdiomaContext.Provider value={{
+      language,
+      setLanguage
+    }}>
       {children}
     </IdiomaContext.Provider>
   );
