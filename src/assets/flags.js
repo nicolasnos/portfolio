@@ -1,5 +1,5 @@
 import spainFlag from "./SVGimg/spainFlag.svg";
-import engFlag from "./SVGimg/ukFlag.svg";
+import engFlag from "./SVGimg/Flag-United-Kingdom.webp";
 
 export const flags = [
   {

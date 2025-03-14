@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { IdiomaContext } from "../LanguageContext";
 
-function Footer({language}) {
+function Footer() {
+  const { language } = useContext(IdiomaContext);
   return (
     <footer className="footer">
       <p>
-        {(language === "eng") ? "Powered by " : "Desarrollado por "}
+        {language === "eng" ? "Powered by " : "Desarrollado por "}
         <a
           href="https://www.linkedin.com/in/nicolas-olmos-a7a1ba261/"
           target="_blank"
@@ -12,7 +14,7 @@ function Footer({language}) {
         >
           Nicolas Olmos
         </a>{" "}
-        2023
+        2025
       </p>
     </footer>
   );
