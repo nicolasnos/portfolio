@@ -19,7 +19,10 @@
       height: 100%;
       border: none;
       & img {
-        width: 60px;
+        width: 40px;
+        border-radius: 50%;
+        height: 50px;
+        object-fit: cover;
       }
     }
     @include tablet {

@@ -1,19 +1,28 @@
-import React, {useState, useContext,createContext, useEffect} from 'react'
+import React, { useState, useContext, createContext, useEffect } from "react";
 
 export const IdiomaContext = createContext();
 
 export const IdiomaProvider = ({ children }) => {
-    const [language, setLanguage] = useState("eng");
+  const [language, setLanguage] = useState();
 
-    useEffect(() => {
-      sessionStorage.setItem("language", language);
-    }, [language]);
+  useEffect(() => {
+    let sessionLanguage = sessionStorage.getItem("language");
+    setLanguage(sessionLanguage || "es");
+  }, []);
+
+  const handleChangeLanguage = (lang) => {
+    setLanguage(lang);
+    sessionStorage.setItem("language", lang);
+  };
 
   return (
-    <IdiomaContext.Provider value={{
-      language,
-      setLanguage
-    }}>
+    <IdiomaContext.Provider
+      value={{
+        language,
+        setLanguage,
+        handleChangeLanguage,
+      }}
+    >
       {children}
     </IdiomaContext.Provider>
   );
